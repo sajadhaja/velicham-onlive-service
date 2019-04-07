@@ -4,14 +4,17 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng build && node ./bin/www",
-    "build": "ng build  && node ./bin/www",
+    "start": "node ./bin/www",
+    "build": "ng build",
     "test": "ng test",
+    "postinstall": "ng build --aot -prod",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "^1.6.0",
+    "@angular/compiler-cli": "^5.0.0",
     "@angular/animations": "^5.0.0",
     "@angular/common": "^5.0.0",
     "@angular/compiler": "^5.0.0",
@@ -29,6 +32,7 @@
     "morgan": "^1.9.0",
     "rxjs": "^5.5.2",
     "serve-favicon": "^2.4.5",
+    "typescript": "~2.4.2",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
@@ -52,5 +56,9 @@
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
     "typescript": "~2.4.2"
+  },
+  "engines": {
+    "node": "8.12.0",
+    "npm": "6.4.1"
   }
 }
