@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class PodcastDetailComponent implements OnInit {
 
-  podcast = {};
+  podcast : any= {};
 
   constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient) { }
 
