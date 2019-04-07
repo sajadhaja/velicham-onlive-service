@@ -8,14 +8,16 @@
     <thead>
       <tr>
         <th>Title</th>
-        <th>Author</th>
+        <th>Description</th>
+        <th>Status</th>
         <th>Action</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let podcast of podcasts">
         <td>{{ podcast.title }}</td>
-        <td>{{ podcast.author }}</td>
+        <td>{{ podcast.desc }}</td>
+        <td>Waiting for review</td>
         <td><a [routerLink]="['/podcast-details', podcast._id]">Show Detail</a></td>
       </tr>
     </tbody>

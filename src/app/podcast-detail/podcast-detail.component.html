@@ -1,14 +1,14 @@
 <div class="container">
   <h1>{{ podcast.title }}</h1>
   <dl class="list">
-    <dt>ISBN</dt>
-    <dd>{{ podcast.isbn }}</dd>
-    <dt>Author</dt>
-    <dd>{{ podcast.author }}</dd>
-    <dt>Publish Year</dt>
-    <dd>{{ podcast.published_year }}</dd>
-    <dt>Publisher</dt>
-    <dd>{{ podcast.publisher }}</dd>
+    <dt>Description</dt>
+    <dd>{{ podcast.desc }}</dd>
+    <dt>Audio URL</dt>
+    <dd>{{ podcast.audioUrl }}</dd>
+    <dt>Audio Type</dt>
+    <dd>{{ podcast.audioType }}</dd>
+    <dt>Published Date</dt>
+    <dd>{{ podcast.pubDate }}</dd>
     <dt>Update Date</dt>
     <dd>{{ podcast.updated_date | date:'short' }}</dd>
   </dl>

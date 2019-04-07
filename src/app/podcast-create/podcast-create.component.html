@@ -2,26 +2,26 @@
   <h1>Add New Podcast</h1>
   <div class="row">
     <div class="col-md-6">
-      <form (ngSubmit)="savePodcast()" #podcastForm="ngForm">
-        <div class="form-group">
-          <label for="name">ISBN</label>
-          <input type="text" class="form-control" [(ngModel)]="podcast.isbn" name="isbn" required>
-        </div>
+      <form (ngSubmit)="savePodcast()" #podcastForm="ngForm">        
         <div class="form-group">
           <label for="name">Title</label>
           <input type="text" class="form-control" [(ngModel)]="podcast.title" name="title" required>
         </div>
         <div class="form-group">
-          <label for="name">Author</label>
-          <input type="text" class="form-control" [(ngModel)]="podcast.author" name="author" required>
+          <label for="name">Description</label>
+          <textarea type="text" class="form-control" [(ngModel)]="podcast.desc" name="desc" required></textarea>
         </div>
         <div class="form-group">
-          <label for="name">Published Year</label>
-          <input type="number" class="form-control" [(ngModel)]="podcast.published_year" name="published_year" required>
+          <label for="name">Audio URL</label>
+          <input type="text" class="form-control" [(ngModel)]="podcast.audioUrl" name="audioUrl" required>
         </div>
         <div class="form-group">
-          <label for="name">Publisher</label>
-          <input type="text" class="form-control" [(ngModel)]="podcast.publisher" name="publisher" required>
+          <label for="name">Audio Type</label>
+          <input type="text" class="form-control" [(ngModel)]="podcast.audioType" name="audioType" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Publish Date</label>
+          <input type="text" class="form-control" [(ngModel)]="podcast.pubDate" name="pubDate" required>
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-success" [disabled]="!podcastForm.form.valid">Save</button>

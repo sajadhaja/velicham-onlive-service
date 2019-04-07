@@ -21,7 +21,7 @@ export class PodcastCreateComponent implements OnInit {
     this.http.post('/podcast', this.podcast)
       .subscribe(res => {
           let id = res['_id'];
-          this.router.navigate(['/podcast-details', id]);
+          this.router.navigate(['/podcasts']);
         }, (err) => {
           console.log(err);
         }
